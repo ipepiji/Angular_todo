@@ -28,7 +28,10 @@ const routes: Routes = [
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'unauthorized', component: PageUnauthorizedComponent },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '**', redirectTo: 'page-not-found', pathMatch: 'full'
+  },
+  { path: 'page-not-found', component: PageNotFoundComponent }
 ];
 
 @NgModule({
