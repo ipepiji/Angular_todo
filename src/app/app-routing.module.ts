@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DashboardComponent as AdminDashboardComponent } from './admin/dashboard/dashboard.component';
 import { DashboardComponent as CustomerDashboardComponent } from './customer/dashboard/dashboard.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { PageUnauthorizedComponent } from './page-unauthorized/page-unauthorized.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './auth.guard';
@@ -35,4 +36,13 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponents = [LoginComponent, RegisterComponent, AboutUsComponent, AdminDashboardComponent, CustomerDashboardComponent, PageNotFoundComponent] 
+export const RoutingComponents = [
+  LoginComponent,
+  RegisterComponent,
+  AboutUsComponent,
+  AdminDashboardComponent,
+  CustomerDashboardComponent,
+  PageUnauthorizedComponent,
+  PageNotFoundComponent,
+  NavMenuComponent
+] 

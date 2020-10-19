@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "../node_modules/bootswatch/dist/cerulean/bootstrap.min.css";
-
 .multicolortext {
   background-image: linear-gradient(to left, orange, red);
   -webkit-background-clip: text;
@@ -9,4 +8,20 @@
   background-clip: text;
   color: transparent;
   font-weight: bold;
+}
+
+.jumbotron {
+  background: #000 url("./assets/grey.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0px;
+  padding: 85px 85px;
+}
+
+.footer-copyright {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
 }

@@ -5,7 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  isCollapsed = true;
-  ngOnInit() { }
+export class AppComponent implements OnInit{
+  currentYear : number;
+  title = 'AngularTodo';
+
+  ngOnInit(){
+    this.currentYear = (new Date()).getFullYear()
+  }
 }
