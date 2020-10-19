@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootswatch/dist/cerulean/bootstrap.min.css";
+
+.multicolortext {
+  background-image: linear-gradient(to left, orange, red);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
