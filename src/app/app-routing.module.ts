@@ -6,32 +6,34 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { DashboardComponent as AdminDashboardComponent } from './admin/dashboard/dashboard.component';
 import { DashboardComponent as CustomerDashboardComponent } from './customer/dashboard/dashboard.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { DefaultNavMenuComponent } from './nav-menu/default-nav-menu/default-nav-menu.component';
+import { CustomerNavMenuComponent } from './nav-menu/customer-nav-menu/customer-nav-menu.component';
 import { PageUnauthorizedComponent } from './page-unauthorized/page-unauthorized.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
-  { path: 'register', component: RegisterComponent },
-  { path: 'about-us', component: AboutUsComponent },
+  { path: 'register', loadChildren: () => import('./register/register.module').then(m => m.RegisterModule) },
+  { path: 'about-us', loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule) },
   {
     path: 'admin', canActivate: [AuthGuard], children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-      { path: 'dashboard', component: AdminDashboardComponent },
+      { path: 'dashboard', loadChildren: () => import('./admin/dashboard/dashboard.module').then(m => m.DashboardModule) },
     ]
   },
   {
     path: 'customer', canActivate: [AuthGuard], children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-      { path: 'dashboard', component: CustomerDashboardComponent },
+      { path: 'dashboard', loadChildren: () => import('./customer/dashboard/dashboard.module').then(m => m.DashboardModule) },
     ]
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'unauthorized', component: PageUnauthorizedComponent },
+  { path: 'page-unauthorized', loadChildren: () => import('./page-unauthorized/page-unauthorized.module').then(m => m.PageUnauthorizedModule) },
   {
     path: '**', redirectTo: 'page-not-found', pathMatch: 'full'
   },
-  { path: 'page-not-found', component: PageNotFoundComponent }
+  { path: 'page-not-found', loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
 ];
 
 @NgModule({
@@ -51,5 +53,7 @@ export const RoutingComponents = [
   CustomerDashboardComponent,
   PageUnauthorizedComponent,
   PageNotFoundComponent,
-  NavMenuComponent
+  NavMenuComponent,
+  DefaultNavMenuComponent,
+  CustomerNavMenuComponent
 ] 

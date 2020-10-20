@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -6,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-menu.component.css']
 })
 export class NavMenuComponent implements OnInit {
+  isCollapsed = true;
+  isLoggedIn: boolean;
+  userType: string;
 
-  constructor() { }
+
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.isLoggedIn = this.auth.isLoggedIn();
+    if (this.auth.isLoggedIn()) {
+      this.userType = this.auth.getUserType();
+    }
   }
-
-  isCollapsed = true;
 }

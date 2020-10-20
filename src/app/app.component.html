@@ -1,6 +1,6 @@
 <div [ngSwitch]="url">
 
-    <div *ngSwitchCase="'/unauthorized'">
+    <div *ngSwitchCase="'/page-unauthorized'">
         <app-page-unauthorized></app-page-unauthorized>
     </div>
 
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="footer-copyright text-center py-3">© {{ currentYear }} Copyright:
+        <div class="footer-copyright text-center py-2">© {{ currentYear }} Copyright:
             <a href="https://github.com/ipepiji" target="_blank">irfanhafizhi1995@gmail.com</a>
         </div>
     </div>

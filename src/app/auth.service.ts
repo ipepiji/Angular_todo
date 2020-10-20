@@ -10,4 +10,8 @@ export class AuthService {
   isLoggedIn(): boolean {
     return false;
   }
+
+  getUserType(): string {
+    return "customer";
+  }
 }

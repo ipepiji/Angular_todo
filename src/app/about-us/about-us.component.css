@@ -26,12 +26,12 @@
 }
 
 .about-us-card .card-body {
-    padding: 18.4% 25% 16.3%;
+    padding: 25.5% 25%;
 }
 
-@media (max-width: 422px) {
+@media only screen and (max-width: 1024px) {
     .about-us-card .card-body {
-        padding: 35px 24px;
+        padding: 76.6% 25%;
     }
 }
 

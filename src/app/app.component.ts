@@ -8,9 +8,9 @@ import { map, filter } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'AngularTodo';
   currentYear: number;
   url: string;
-  title = 'AngularTodo';
 
   constructor(private router: Router) { }
 
