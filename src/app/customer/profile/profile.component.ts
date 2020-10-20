@@ -51,25 +51,26 @@ export class ProfileComponent implements OnInit {
       },
       allowOutsideClick: () => !Swal.isLoading()
     }).then(async (result) => {
-      console.log(result)
-      await fetch(`api-backend`)
-        .then(response => {
-          if (!response) {
-            throw new Error(response.statusText)
-          }
-          Swal.fire(
-            'Success!',
-            'You update your profile',
-            'success'
-          )
-        })
-        .catch(error => {
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Something went wrong!'
+      if (result.isConfirmed) {
+        await fetch(`api-backend`)
+          .then(response => {
+            if (!response) {
+              throw new Error(response.statusText)
+            }
+            Swal.fire(
+              'Success!',
+              'You update your profile',
+              'success'
+            )
           })
-        })
+          .catch(error => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Something went wrong!'
+            })
+          })
+      }
     })
   }
 
