@@ -8,7 +8,7 @@ export class AuthService {
   constructor() { }
 
   isLoggedIn(): boolean {
-    return false;
+    return true;
   }
 
   getUserType(): string {

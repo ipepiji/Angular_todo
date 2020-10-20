@@ -5,6 +5,8 @@ import { RegisterComponent } from './register/register.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DashboardComponent as AdminDashboardComponent } from './admin/dashboard/dashboard.component';
 import { DashboardComponent as CustomerDashboardComponent } from './customer/dashboard/dashboard.component';
+import { BookingComponent } from './customer/booking/booking.component';
+import { ProfileComponent } from './customer/profile/profile.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { DefaultNavMenuComponent } from './nav-menu/default-nav-menu/default-nav-menu.component';
 import { CustomerNavMenuComponent } from './nav-menu/customer-nav-menu/customer-nav-menu.component';
@@ -19,13 +21,15 @@ const routes: Routes = [
   {
     path: 'admin', canActivate: [AuthGuard], children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-      { path: 'dashboard', loadChildren: () => import('./admin/dashboard/dashboard.module').then(m => m.DashboardModule) },
+      { path: 'dashboard', loadChildren: () => import('./admin/dashboard/dashboard.module').then(m => m.DashboardModule) }
     ]
   },
   {
     path: 'customer', canActivate: [AuthGuard], children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       { path: 'dashboard', loadChildren: () => import('./customer/dashboard/dashboard.module').then(m => m.DashboardModule) },
+      { path: 'booking', loadChildren: () => import('./customer/booking/booking.module').then(m => m.BookingModule) },
+      { path: 'profile', loadChildren: () => import('./customer/profile/profile.module').then(m => m.ProfileModule) },
     ]
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -50,7 +54,7 @@ export const RoutingComponents = [
   RegisterComponent,
   AboutUsComponent,
   AdminDashboardComponent,
-  CustomerDashboardComponent,
+  CustomerDashboardComponent, BookingComponent, ProfileComponent,
   PageUnauthorizedComponent,
   PageNotFoundComponent,
   NavMenuComponent,

@@ -1,0 +1,32 @@
+#card {
+  display: flex;
+  min-width: 50%;
+  min-height: 100%;
+  background: rgb(255, 255, 255);
+  border: 10pt;
+  border-radius: 8pt;
+  align-content: center;
+  justify-content: center;
+}
+#dp {
+  background: url("https://raw.githubusercontent.com/znapci/znapci.github.io/master/images/android.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  width: 220px;
+  margin: 30px;
+  border: 10px;
+  border-radius: 0px;
+  position: absolute;
+}
+#textbox {
+  min-width: 30%;
+}
+#details {
+  position: relative;
+  font-size: 18px;
+  font-family: "Indie Flower";
+  text-align: center;
+  top: 300px;
+}
