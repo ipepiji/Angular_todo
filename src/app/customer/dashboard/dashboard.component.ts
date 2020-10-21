@@ -19,8 +19,8 @@ export class DashboardComponent implements OnInit {
     weekends: true,
     eventClick: this.handleEventClick.bind(this),
     events: [
-      { title: 'Repair', date: '2020-10-27', display: 'background' },
-      { title: 'Checking', date: '2020-10-30', display: 'background' }
+      { title: 'Doctor Appointment', date: '2020-10-27', display: 'background' },
+      { title: 'Medication Refill', date: '2020-10-30', display: 'background' }
     ],
     height: "100%",
     buttonText: {
