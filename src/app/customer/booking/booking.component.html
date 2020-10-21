@@ -1,3 +1,36 @@
 <div class="jumbotron container">
-    ipsum lorem
+    <div class="text-center">
+        <div class="form-card">
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">Book an appointment now</legend>
+                <div class="form-group">
+                    <label class="form-label" for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                        value="Mohd Irfan Hafizhi bin Zulkifli" tabindex="1" required readonly>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="ic">IC</label>
+                    <input type="number" class="form-control" id="ic" name="ic" value="951205136627" tabindex="1"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone</label>
+                    <input type="number" class="form-control" id="phone" name="phone" value="0136410904" tabindex="1"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="reason">Reason</label>
+                    <textarea rows="2" cols="150" name="reason" class="form-control" id="reason" tabindex="0"
+                        required>Scaling</textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="date">Date</label>
+                    <input type="date" class="form-control" id="date" name="date">
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary" (click)="submitBooking()">
+                Submit
+            </button>
+        </div>
+    </div>
 </div>

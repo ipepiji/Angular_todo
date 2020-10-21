@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
   handleEventClick(arg): void {
     Swal.fire({
       text: arg.event.title,
-      icon: 'success'
+      icon: 'info'
     });
   }
 
