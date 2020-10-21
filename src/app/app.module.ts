@@ -7,6 +7,16 @@ import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DataTablesModule } from 'angular-datatables';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import bootstrapPlugin from '@fullcalendar/bootstrap';
+
+FullCalendarModule.registerPlugins([
+  dayGridPlugin,
+  interactionPlugin,
+  bootstrapPlugin
+]);
 
 @NgModule({
   declarations: [
@@ -18,7 +28,8 @@ import { DataTablesModule } from 'angular-datatables';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    DataTablesModule
+    DataTablesModule,
+    FullCalendarModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

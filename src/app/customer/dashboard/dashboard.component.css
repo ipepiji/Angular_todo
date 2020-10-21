@@ -1,0 +1,9 @@
+::ng-deep .fc-event {
+    cursor: pointer;
+}
+
+::ng-deep .fc-event-title {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
