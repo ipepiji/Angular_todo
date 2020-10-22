@@ -1,19 +1,17 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
         <a class="navbar-brand"><span class="multicolortext">AngularTodo</span></a>
         <button class="navbar-toggler" type="button" (click)="isCollapsed=!isCollapsed">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-
         <div app-default-nav-menu class="collapse navbar-collapse" [ngbCollapse]="isCollapsed" *ngIf="!isLoggedIn">
         </div>
 
-        <div app-admin-nav-menu class="collapse navbar-collapse" [ngbCollapse]="isCollapsed"
-            *ngIf="isLoggedIn && userType === 'admin'"></div>
-
         <div app-customer-nav-menu class="collapse navbar-collapse" [ngbCollapse]="isCollapsed"
-            *ngIf="isLoggedIn && userType === 'customer'"></div>
+            *ngIf="isLoggedIn && userType === 'customer'">
+        </div>
 
     </nav>
 </header>

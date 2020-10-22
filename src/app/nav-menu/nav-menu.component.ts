@@ -11,7 +11,6 @@ export class NavMenuComponent implements OnInit {
   isLoggedIn: boolean;
   userType: string;
 
-
   constructor(private auth: AuthService) { }
 
   ngOnInit(): void {

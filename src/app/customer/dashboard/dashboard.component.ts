@@ -3,7 +3,7 @@ import { CalendarOptions } from '@fullcalendar/angular';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'customer-app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })

@@ -9,17 +9,21 @@
     </div>
 
     <div *ngSwitchDefault>
-        <app-nav-menu></app-nav-menu>
+        <div admin-app-dashboard *ngIf="isLoggedIn && userType === 'admin'; else common"></div>
 
-        <div class="jumbotron">
-            <div class="container">
-                <router-outlet></router-outlet>
+        <ng-template #common>
+            <app-nav-menu></app-nav-menu>
+
+            <div class="jumbotron">
+                <div class="container">
+                    <router-outlet></router-outlet>
+                </div>
             </div>
-        </div>
 
-        <div class="footer-copyright text-center py-2">© {{ currentYear }} Copyright:
-            <a href="https://github.com/ipepiji" target="_blank">irfanhafizhi1995@gmail.com</a>
-        </div>
+            <div class="footer-copyright text-center py-2">© {{ currentYear }} Copyright:
+                <a href="https://github.com/ipepiji" target="_blank">irfanhafizhi1995@gmail.com</a>
+            </div>
+        </ng-template>
     </div>
 
 </div>
