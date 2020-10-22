@@ -23,9 +23,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    padding: 18% 8%;
 }
-
-
 
 .register-card .card-body {
     padding: 22.3% 25%;
@@ -34,6 +33,9 @@
 @media only screen and (max-width: 1024px) {
     .register-card .card-body {
         padding: 72.8% 25%;
+    }
+    .register-card-img {
+        padding: 70% 8%;
     }
 }
 

@@ -23,6 +23,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      padding: 18%;
   }
 
   .login-card .card-body {
@@ -32,6 +33,9 @@
   @media only screen and (max-width: 1024px) {
       .login-card .card-body {
           padding: 84% 25%;
+      }
+      .login-card-img {
+          padding: 70% 8%;
       }
   }
 
